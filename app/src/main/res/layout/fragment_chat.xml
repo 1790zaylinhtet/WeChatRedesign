@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flAppBarChat"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="@dimen/margin_medium_3"
+            android:fadingEdgeLength="@dimen/margin_small"
+            android:translationZ="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="Chats"
+                android:textSize="34sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSearchChat"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:srcCompat="@drawable/search_icon" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActiveNowChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flAppBarChat"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:text="Active Now"
+            android:textColor="@color/colorPrimaryLight_2"
+            android:textSize="@dimen/text_regular" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHorizontalActiveChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvActiveNowChat"
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            tools:itemCount="1"
+            tools:listitem="@layout/view_holder_horizontal_chat_list" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVerticalActiveChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvHorizontalActiveChat"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            tools:itemCount="5"
+            tools:listitem="@layout/view_holder_vertical_chat_list" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

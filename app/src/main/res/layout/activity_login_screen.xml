@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLeftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            app:srcCompat="@drawable/left_button" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivLeftButton"
+            android:layout_marginStart="@dimen/margin_xlarge"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:text="Welcome !"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_heading_2x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLoginToContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvWelcome"
+            android:layout_alignStart="@id/tvWelcome"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="Login to continue"
+            android:textColor="#B3113A5D" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLoginPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLoginToContinue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            app:srcCompat="@drawable/login_photo" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivLoginPhoto"
+            android:hint="Enter Your Phone Number"
+            android:layout_marginStart="@dimen/margin_xlarge"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:inputType="number"
+            android:textColor="#062743" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_alignStart="@id/editText"
+            android:hint="Enter Your Password"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:inputType="textPassword"
+            android:textColor="#062743" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvForgotYourPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText1"
+            android:layout_alignEnd="@id/editText1"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:text="Forgot Password?"
+            android:textColor="#062743" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_below="@id/tvForgotYourPassword"
+            android:id="@+id/btnLogin"
+            android:layout_width="130dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/text_color"
+            android:text="Login"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/margin_medium" />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

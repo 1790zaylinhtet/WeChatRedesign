@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/margin_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_chat_vertical">
+
+        <com.padc.thepodcastapp.viewpods.RoundedProfileImage
+            android:id="@+id/ivProfileImageChat"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:elevation="@dimen/margin_medium"
+            android:scaleType="centerCrop"
+            app:cornerRadius="30dp"
+            app:isActive="true"
+            app:srcCompat="@drawable/harry_potter" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserNameVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@id/ivProfileImageChat"
+            android:text="Zay Lin"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChatInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvUserNameVertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toEndOf="@id/ivProfileImageChat"
+            android:text="You sent a video"
+            android:textColor="@color/colorPrimaryLight_2"
+            android:textSize="@dimen/text_regular" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLastOnlineTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="5 mins"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_small" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_medium_3"
+            android:layout_height="@dimen/margin_medium_3"
+            android:layout_below="@id/tvLastOnlineTime"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/two_green_marks" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

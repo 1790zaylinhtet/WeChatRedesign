@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/moment"
+        android:title="Moment"
+        app:showAsAction="always"
+        android:icon="@drawable/moment_icon"/>
+
+    <item
+        android:id="@+id/chat"
+        android:title="Chat"
+        app:showAsAction="always"
+        android:icon="@drawable/chat_icon"/>
+
+    <item
+        android:id="@+id/contacts"
+        android:title="Contacts"
+        app:showAsAction="always"
+        android:icon="@drawable/contacts_icon"/>
+
+    <item
+        android:id="@+id/me"
+        android:title="Me"
+        app:showAsAction="always"
+        android:icon="@drawable/me_icon"/>
+
+    <item
+        android:id="@+id/setting"
+        android:title="Setting"
+        app:showAsAction="always"
+        android:icon="@drawable/setting_icon"/>
+
+</menu>

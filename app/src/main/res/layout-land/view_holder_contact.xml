@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margin_medium">
+
+    <com.padc.thepodcastapp.viewpods.RoundedProfileImage
+        android:id="@+id/ivProfileImageContact"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:clipToOutline="false"
+        android:elevation="@dimen/margin_medium"
+        android:scaleType="centerCrop"
+        app:cornerRadius="30dp"
+        app:hasBorderCircle="false"
+        app:isActive="false"
+        app:srcCompat="@drawable/harry_potter" />
+
+</RelativeLayout>

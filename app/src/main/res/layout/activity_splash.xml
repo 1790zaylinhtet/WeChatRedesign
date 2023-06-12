@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHomeLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="210dp"
+            app:srcCompat="@drawable/homelogo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextYourFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivHomeLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:text="@string/text_your_friends"
+            android:textColor="#062743"
+            android:textSize="@dimen/text_regular_3x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTextYourFriends"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/end_to_end_secured"
+            android:textSize="@dimen/text_regular" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_below="@id/tvEnd"
+            android:layout_alignStart="@id/tvEnd"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:background="@drawable/background_sign_up_button"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="#113A5D" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_alignTop="@id/btnSignUp"
+            android:layout_marginStart="@dimen/margin_xxlarge"
+            android:layout_toEndOf="@id/btnSignUp"
+            android:background="@drawable/background_login_button"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="@dimen/margin_medium"
+            android:fadingEdgeLength="@dimen/margin_small"
+            android:translationZ="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMoment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="@string/lbl_moment"
+                android:textSize="34sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnNewCreateMoment"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:srcCompat="@drawable/create_new_moment_icon" />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPosts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flAppBar"
+            android:layout_marginTop="@dimen/margin_medium"
+            tools:listitem="@layout/view_holder_posts" />
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

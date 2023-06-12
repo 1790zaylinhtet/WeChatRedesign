@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLeftButtonOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            app:srcCompat="@drawable/left_button" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivLeftButtonOtp"
+            android:layout_marginStart="@dimen/margin_xlarge"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:text="Hi !"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_heading_2x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCreateAnewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHi"
+            android:layout_alignStart="@id/tvHi"
+            android:text="Create a new account"
+            android:textColor="#B3113A5D" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVerifyPhoneNumberPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCreateAnewAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            app:srcCompat="@drawable/verify_phone_number_photo" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivVerifyPhoneNumberPhoto"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="Enter Your Phone Number"
+            android:inputType="number"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:textColorHint="#062743" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGetOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/editText2"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_toEndOf="@id/editText2"
+            android:backgroundTint="@color/text_color"
+            android:text="Get OTP"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/margin_medium" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/otpPinCode"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnGetOtp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:cursorVisible="true"
+            android:elevation="1000dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:itemBackground="#FFFFFFFF"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold"
+            app:cursorColor="#4A4A4B"
+            app:cursorWidth="2dp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="4"
+            app:itemHeight="50dp"
+            app:itemRadius="@dimen/margin_medium"
+            app:itemSpacing="@dimen/margin_medium_3"
+            app:itemWidth="50dp"
+            app:lineColor="@color/white"
+            app:lineWidth="1dp"
+            app:viewType="rectangle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReceiveOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otpPinCode"
+            android:layout_alignStart="@id/otpPinCode"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="Don't receive the OTP?"
+            android:textColor="#999999" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otpPinCode"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_toEndOf="@id/tvReceiveOtp"
+            android:text="Resend Code"
+            android:textColor="@color/text_color" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerify"
+            android:layout_width="135dp"
+            android:layout_height="56dp"
+            android:layout_below="@id/tvReceiveOtp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="@color/text_color"
+            android:text="Verify"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/margin_medium" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

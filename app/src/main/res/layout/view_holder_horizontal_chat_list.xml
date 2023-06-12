@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_medium">
+
+    <com.padc.thepodcastapp.viewpods.RoundedProfileImage
+        android:id="@+id/mcvProfileImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:elevation="@dimen/margin_medium"
+        android:scaleType="centerCrop"
+        app:cornerRadius="30dp"
+        app:isActive="true"
+        app:srcCompat="@drawable/harry_potter" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mcvProfileImage"
+        android:layout_centerHorizontal="true"
+        android:text="Zay Lin" />
+
+</RelativeLayout>

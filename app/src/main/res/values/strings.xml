@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">The Podcast App</string>
+    <string name="text_your_friends">Text your friends and share moments</string>
+    <string name="end_to_end_secured">End-to-end secured messaging app with Social Elements</string>
+    <string name="lbl_gender">Gender</string>
+    <string name="lbl_moment">Moments</string>
+</resources>
